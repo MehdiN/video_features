@@ -1,9 +1,10 @@
+omegaconf
 numpy
 tqdm
 scipy
 pillow
 numba
-python-opencv
+opencv-python
 av
 torch==2.8.0
 torchvision==0.23.0
@@ -12,3 +13,4 @@ fsspec
 safetensors
 timm
 huggingface_hub
+ftfy
