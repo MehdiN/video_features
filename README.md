@@ -1,3 +1,5 @@
+This is a fork of v-iashin/video_features for primary container usage.
+The features associated with the usage of a virtual environment are deprecated on this version.
 
 <div align="center">
 
