@@ -1,6 +1,31 @@
 This is a fork of v-iashin/video_features for primary container usage.
 The features associated with the usage of a virtual environment are deprecated on this version.
 
+```bash
+# clone the repo
+git clone https://github.com/MehdiN/video_features.git
+
+cd video_features
+
+# Build the container, docker should work as well
+podman build . -t video_features
+
+# Run the image
+podman run -it --rm --mount type=bind,source=.,destination=/home/video_features \
+  --shm-size 8G \
+  --device nvidia.com/gpu=all \
+  video_features \
+  bash
+
+```
+
+On the container, run the desired model:
+
+```bash
+python3 main.py feature_type=r21d video_paths="./sample/v_GGSY1Qvo990.mp4" on_extraction="save_numpy"
+
+```
+
 <div align="center">
 
 # Video Features
