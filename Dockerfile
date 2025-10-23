@@ -17,10 +17,8 @@ RUN apt-get update && apt-get install -q -y --no-install-recommends \
     libxrender-dev \
     libgl1
 
-WORKDIR /home/video_features
-
 COPY requirements.txt .
 
 RUN pip3 install -r requirements.txt
 
-COPY . .
+WORKDIR /home/video_features
